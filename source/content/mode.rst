@@ -6,7 +6,16 @@
 
 
 
-Mist为不同的防模仿场景提供了不同的模式。下表给出了三个模式在不同场景和应用中的相对防护强度。其中，Textual Inversion与Dreambooth均基于Stable Diffusion。
+Mist为不同的防模仿场景提供了三种模式。用户可以根据具体情况决定使用何种模式。
+
+Textural模式：通过在水印中注入混乱的纹理信息，达到防AI模仿的效果；主要针对Img2Img场景；所需要的GPU显存较少。
+
+Semantic模式：通过在水印中干扰原图的语义信息，达到防AI模仿的效果；主要针对主题生成（Textual Inversion、Dreambooth等）场景；所需要的GPU显存较多。
+
+Fused模式：以一定比例混合Textural和Semantic模式；所需要的GPU显存较多。
+
+
+下表给出了三个模式在Textual Inversion、NovelAI Img2Img、Dreambooth、Scenario.gg四个场景中的相对防护强度。其中，Textual Inversion与Dreambooth均基于Stable Diffusion。
 
 +-------------------------------------------------------+-------------------+-----------------+------------+-------------+
 |                                                       | Textual Inversion | NovelAI Img2Img | Dreambooth | Scenario.gg |
@@ -20,8 +29,7 @@ Mist为不同的防模仿场景提供了不同的模式。下表给出了三个�
 | ◎:非常强      ○:强      △:中等      ╳:弱                                                                               |
 +-------------------------------------------------------+-------------------+-----------------+------------+-------------+
 
-尽管Fused模式在效果上综合了Textural模式和Semantic模式的优点，但Textural模式需要的设备显存较少，而Semantic模式
-在特定场景下拥有更强的效果。因此，用户可以根据具体情况决定使用何种模式。
+
 
 
 
