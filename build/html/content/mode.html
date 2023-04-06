@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>模式与参数 &mdash; Mist 1.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="设备要求" href="device.html" />
+    <link rel="prev" title="快速上手指南" href="quickstart.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Mist
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">快速上手指南</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">模式与参数</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#mode">模式（Mode）选择</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">参数</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="device.html">设备要求</a></li>
+<li class="toctree-l1"><a class="reference internal" href="validation.html">效果验证指南</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Mist</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>模式与参数</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/content/mode.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>模式与参数<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h1>
+<section id="mode">
+<h2>模式（Mode）选择<a class="headerlink" href="#mode" title="Permalink to this headline"></a></h2>
+<p>Mist为不同的防模仿场景提供了不同的模式。下表给出了三个模式在不同场景和应用中的相对防护强度。其中，Textual Inversion与Dreambooth均基于Stable Diffusion。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 47%" />
+<col style="width: 16%" />
+<col style="width: 15%" />
+<col style="width: 10%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Textual Inversion</p></th>
+<th class="head"><p>NovelAI Img2Img</p></th>
+<th class="head"><p>Dreambooth</p></th>
+<th class="head"><p>Scenario.gg</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Textural</p></td>
+<td><p>○</p></td>
+<td><p>◎</p></td>
+<td><p>○</p></td>
+<td><p>◎</p></td>
+</tr>
+<tr class="row-odd"><td><p>Semantic</p></td>
+<td><p>◎</p></td>
+<td><p>△</p></td>
+<td><p>╳</p></td>
+<td><p>○</p></td>
+</tr>
+<tr class="row-even"><td><p>Fused(Fusion weight=1)</p></td>
+<td><p>◎</p></td>
+<td><p>○</p></td>
+<td><p>△</p></td>
+<td><p>○</p></td>
+</tr>
+<tr class="row-odd"><td colspan="5"><p>◎:非常强      ○:强      △:中等      ╳:弱</p></td>
+</tr>
+</tbody>
+</table>
+<p>尽管Fused模式在效果上综合了Textural模式和Semantic模式的优点，但Textural模式需要的设备显存较少，而Semantic模式
+在特定场景下拥有更强的效果。因此，用户可以根据具体情况决定使用何种模式。</p>
+</section>
+<section id="id2">
+<h2>参数<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h2>
+<p>Mist允许用户自行调整参数来决定给图片增加的水印的特性。Mist的UI界面中提供了对参数意义的简单说明。下表进一步
+提供了调节这些参数的提示和细节。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 10%" />
+<col style="width: 81%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>参数名</p></th>
+<th class="head"><p>推荐值</p></th>
+<th class="head"><p>备注</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Strength</p></td>
+<td><p>16</p></td>
+<td><p>在Fused模式下，16能提供应对不同AI画风模仿场景的好效果。如果仅需要针对某些特殊场景，可选择其余两个模式下，此时，强度8即可具备良好保护效果。</p></td>
+</tr>
+<tr class="row-odd"><td><p>Steps</p></td>
+<td><p>100</p></td>
+<td><p>100步是性能和时间效率间一个较好的平衡点。</p></td>
+</tr>
+<tr class="row-even"><td><p>Output size</p></td>
+<td><p>512</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Fused weight</p></td>
+<td><p>1</p></td>
+<td><p>Fused weight在Fused模式下平衡Semantic和Textural两种模式的相对权重。</p></td>
+</tr>
+<tr class="row-even"><td><p>Low VRAM Mode</p></td>
+<td><p>False</p></td>
+<td><p>通过牺牲一些性能，Low VRAM Mode（低显存模式）能极大降低运行Mist所需要的设备显存。（详见 设备要求 部分 ）</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="quickstart.html" class="btn btn-neutral float-left" title="快速上手指南" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="device.html" class="btn btn-neutral float-right" title="设备要求" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Mist.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
