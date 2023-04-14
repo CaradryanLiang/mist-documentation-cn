@@ -54,7 +54,7 @@ NovelAI是一个支持 `Img2Img generation <https://novelai.net/image>`_ 图像�
 
 
 
-.. image:: ../media/novelai.png
+.. image:: ../media/NovelAI.png
    :align: center
    :alt: fig_cbscenario
 
