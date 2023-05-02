@@ -158,7 +158,7 @@ featurize的云服务器中，只有work文件夹下的文件会在关闭云服�
 在命令行终端中输入以下命令，从GitHub上下载Mist的代码：
 
 ::
-   
+
       git clone https://github.com/mist-project/mist.git
 
 
@@ -225,6 +225,7 @@ featurize的云服务器中，只有work文件夹下的文件会在关闭云服�
 现在，您应该仍然在mist文件夹中。此时，输入以下命令以获得Mist所用模型：
 
 ::
+   
       wget -c https://huggingface.co/CompVis/stable-diffusion-v-1-4-original/resolve/main/sd-v1-4.ckpt
 
 
