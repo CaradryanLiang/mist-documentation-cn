@@ -1,4 +1,4 @@
-效果验证指南
+效果验证
 *****************
 
 Mist可用于避免不同的AI for Art应用模仿图片的风格和内容。为了帮助用户快速验证
@@ -19,7 +19,7 @@ Textual Inversion
 Textual inversion是一种使用伪词总结输入图像以进一步进行风格转换的工具。为了复现我们的测试结果，您可以访问 `GitHub <https://github.com/AUTOMATIC1111/stable-diffusion-webui>`_ 上开源的Stable-diffuion-webui使用textual inversion功能。
 
 
-访问textual inversion选项；创建名为Mist-Vangogh的embedding，设置Initialization text为style *，number of vectors per token为8。
+访问textual inversion选项；创建名为Mist-Vangogh的embedding，设置Initialization text为style \*，number of vectors per token为8。
 
 .. image:: ../media/Fig-train-1-text.png
    :align: center

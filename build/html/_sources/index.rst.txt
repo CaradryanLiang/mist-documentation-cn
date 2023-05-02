@@ -33,4 +33,5 @@ Mist是一款功能强大的、保护艺术作品免受AI-for-Art应用程序（
       content/mode.rst
       content/device.rst
       content/validation.rst
+      content/cloud.rst
  
