@@ -22,7 +22,7 @@ Mist是一款功能强大的、保护艺术作品免受AI-for-Art应用程序（
 我们已将Mist开源，并将致力于长期维护和更新Mist。我们希望建立一个社区。用户、开发者和其他感兴趣的人可以在其中讨论Mist功能的改进，与AI-for-Art应用相关的技术、道德和法律问题，以及与AI相关的其他话题。请查看我们的 `主页`_ 以获取更多关于加入我们的详细信息！
 
 
-.. _`主页`: https://mist-project.github.io/
+.. _`主页`: https://psyker-team.github.io/
 
 
    .. toctree::
